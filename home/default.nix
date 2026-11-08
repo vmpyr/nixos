@@ -8,7 +8,7 @@
 
   home.username = "vmpyr";
   home.homeDirectory = "/home/vmpyr";
-  home.stateVersion = "26.05";   # same as system.stateVersion; never change it
+  home.stateVersion = "26.05"; # same as system.stateVersion; never change it
 
   home.packages = with pkgs; [
     ripgrep
