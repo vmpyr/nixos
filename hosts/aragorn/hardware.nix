@@ -15,6 +15,9 @@
   services.fstrim.enable = true;
   services.btrfs.autoScrub.enable = true;
 
+  # --- Firmware updates (fwupdmgr) ---
+  services.fwupd.enable = true;
+
   # --- Swap + hibernation ---
   swapDevices = [ { device = "/swap/swapfile"; } ];
   boot.resumeDevice = "/dev/mapper/cryptroot";

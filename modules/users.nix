@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 {
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = false; # Home Manager runs compinit; avoid doing it twice
+  };
+  environment.pathsToLink = [ "/share/zsh" ]; # completions for system packages
 
   users.users.vmpyr = {
     isNormalUser = true;

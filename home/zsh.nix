@@ -1,4 +1,8 @@
 {
+  # command-not-found replacement (from nix-index-database) + comma: `, cowsay hi`
+  programs.nix-index.enable = true;
+  programs.nix-index-database.comma.enable = true;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -24,7 +28,6 @@
         "docker"
         "docker-compose"
         "systemd"
-        "command-not-found"
       ];
     };
 

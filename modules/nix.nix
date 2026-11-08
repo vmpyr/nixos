@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    trusted-users = [ "vmpyr" ]; # allows extra binary caches (cachix etc.) without root
+  };
 
   # --- Housekeeping ---
   nix.gc = {
