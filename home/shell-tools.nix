@@ -9,4 +9,7 @@
     enable = true;
     options = [ "--cmd cd" ];
   };
+
+  # Silence zoxide's "possible configuration issue" doctor warning
+  home.sessionVariables._ZO_DOCTOR = "0";
 }
