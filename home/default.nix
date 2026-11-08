@@ -9,6 +9,9 @@
     ./neovim.nix
     ./vscodium.nix
     ./plasma.nix
+    ./git.nix
+    ./gpg.nix
+    ./ssh.nix
   ];
 
   home.username = "vmpyr";
