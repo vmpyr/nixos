@@ -3,6 +3,8 @@
 {
   imports = [
     ./zsh.nix
+    ./shell-tools.nix
+    ./neovim.nix
     ./vscodium.nix
   ];
 
@@ -14,8 +16,10 @@
     ripgrep
     fd
     btop
+    python3
 
     unstable.claude-code
+    unstable.uv
     # unstable.<pkg>
   ];
 }
