@@ -4,8 +4,11 @@
   imports = [
     ./zsh.nix
     ./shell-tools.nix
+    ./alacritty.nix
+    ./tmux.nix
     ./neovim.nix
     ./vscodium.nix
+    ./plasma.nix
   ];
 
   home.username = "vmpyr";

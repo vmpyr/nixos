@@ -15,6 +15,13 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Declarative KDE Plasma settings (shortcuts, panels, ...) via Home Manager
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -24,6 +31,7 @@
       nixpkgs-unstable,
       home-manager,
       nix-index-database,
+      plasma-manager,
       ...
     }@inputs:
     {
@@ -52,7 +60,10 @@
             home-manager.useGlobalPkgs = true; # HM uses the system pkgs (including the overlay and allowUnfree)
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.sharedModules = [ nix-index-database.homeModules.nix-index ];
+            home-manager.sharedModules = [
+              nix-index-database.homeModules.nix-index
+              plasma-manager.homeModules.plasma-manager
+            ];
             home-manager.users.vmpyr = import ./home;
           }
         ];
