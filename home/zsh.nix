@@ -1,28 +1,4 @@
-{ pkgs, ... }:
-
 {
-  home.username = "vmpyr";
-  home.homeDirectory = "/home/vmpyr";
-  home.stateVersion = "26.05";   # same as system.stateVersion; never change it
-
-  home.packages = with pkgs; [
-    ripgrep
-    fd
-    btop
-
-    unstable.claude-code
-    # unstable.<pkg>
-  ];
-
-  programs.vscodium = {
-    enable = true;
-    package = pkgs.unstable.vscodium;
-
-    profiles.default.extensions = [
-      pkgs.vscode-extensions.jnoortheen.nix-ide
-    ];
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;

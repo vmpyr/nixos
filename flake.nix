@@ -15,7 +15,7 @@
     nixosConfigurations.aragorn = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./hosts/aragorn
 
         # Make unstable packages available as pkgs.unstable.<name>
         {
@@ -34,7 +34,7 @@
           home-manager.useGlobalPkgs = true;     # HM uses the system pkgs (including the overlay and allowUnfree)
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.users.vmpyr = import ./home.nix;
+          home-manager.users.vmpyr = import ./home;
         }
       ];
     };
