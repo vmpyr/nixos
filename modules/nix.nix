@@ -7,6 +7,7 @@
       "flakes"
     ];
     trusted-users = [ "vmpyr" ]; # allows extra binary caches (cachix etc.) without root
+    warn-dirty = false; # silence "Git tree is dirty" (the prompt already shows uncommitted changes)
   };
 
   # --- Housekeeping ---

@@ -47,6 +47,7 @@
       ll = "eza -la --icons=always --group --header --git";
       la = "eza -l --icons=always --group --header --git";
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#aragorn";
+      nru = "nix flake update --flake ~/nixos-config && sudo nixos-rebuild switch --flake ~/nixos-config#aragorn"; # update all inputs + rebuild
     };
 
     initContent = lib.mkMerge [
