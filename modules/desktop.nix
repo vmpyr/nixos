@@ -20,4 +20,8 @@
   # --- Extras ---
   hardware.bluetooth.enable = true;
   services.printing.enable = true;
+
+  # --- Device sharing ---
+  programs.kdeconnect.enable = true; # phone integration; opens TCP/UDP 1714-1764
+  programs.localsend.enable = true; # AirDrop-style file transfer; opens port 53317
 }
