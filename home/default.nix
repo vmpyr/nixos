@@ -12,6 +12,7 @@
     ./git.nix
     ./gpg.nix
     ./ssh.nix
+    ./brave.nix
   ];
 
   home.username = "vmpyr";
