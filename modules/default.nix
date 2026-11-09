@@ -6,5 +6,6 @@
     ./nix.nix
     ./ssh.nix
     ./users.nix
+    ./virtualisation.nix
   ];
 }
