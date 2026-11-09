@@ -24,6 +24,7 @@
     fd
     btop
     python3
+    qbittorrent
 
     unstable.claude-code
     unstable.uv
