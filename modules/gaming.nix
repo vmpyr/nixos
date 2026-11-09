@@ -9,4 +9,8 @@
     extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
   programs.gamemode.enable = true;
+
+  environment.systemPackages = [
+    pkgs.unstable.r2modman # Thunderstore mod manager
+  ];
 }
