@@ -22,6 +22,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    # Declarative Flatpak remotes/apps (latest tagged release)
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -32,6 +35,7 @@
       home-manager,
       nix-index-database,
       plasma-manager,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -42,6 +46,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/aragorn
+          nix-flatpak.nixosModules.nix-flatpak
 
           # Make unstable packages available as pkgs.unstable.<name>
           {
