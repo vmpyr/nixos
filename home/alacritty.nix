@@ -17,6 +17,14 @@
         decorations = "None"; # no title bar
       };
 
+      keyboard.bindings = [
+        {
+          key = "V";
+          mods = "Control";
+          action = "Paste";
+        }
+      ];
+
       # Always land in tmux: attach to the `main` session, or create it.
       # Closing the window only detaches; the session keeps running.
       terminal.shell = {
