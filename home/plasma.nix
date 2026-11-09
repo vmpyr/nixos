@@ -8,5 +8,13 @@
       key = "Meta+Return";
       command = "alacritty";
     };
+
+    shortcuts = {
+      kwin."Window Close" = [
+        "Meta+Q"
+        "Alt+F4"
+      ];
+      plasmashell."manage activities" = [ ];
+    };
   };
 }
