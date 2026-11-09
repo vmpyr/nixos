@@ -27,6 +27,7 @@
 
     unstable.claude-code
     unstable.uv
+    unstable.vesktop
     # unstable.<pkg>
   ];
 }
