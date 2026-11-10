@@ -22,6 +22,7 @@
     ripgrep
     fd
     btop
+    tig
     python3
     qbittorrent
     helium
