@@ -13,6 +13,7 @@
 
   environment.systemPackages = [
     pkgs.unstable.r2modman # Thunderstore mod manager
+    pkgs.unstable.eden # Switch emulator
     pkgs.mangohud
     (pkgs.unstable.heroic.override {
       extraPkgs = p: [
