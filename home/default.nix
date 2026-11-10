@@ -26,6 +26,7 @@
     python3
     qbittorrent
     helium
+    jellyfin-desktop
 
     unstable.claude-code
     unstable.uv
