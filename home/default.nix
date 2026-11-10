@@ -31,6 +31,7 @@
     unstable.uv
     unstable.vesktop
     unstable.supersonic
+    unstable.vlc
     # unstable.<pkg>
   ];
 }
