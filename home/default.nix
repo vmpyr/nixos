@@ -12,7 +12,6 @@
     ./git.nix
     ./gpg.nix
     ./ssh.nix
-    ./brave.nix
   ];
 
   home.username = "vmpyr";
@@ -25,6 +24,7 @@
     btop
     python3
     qbittorrent
+    helium
 
     unstable.claude-code
     unstable.uv

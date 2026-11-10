@@ -25,6 +25,12 @@
 
     # Declarative Flatpak remotes/apps (latest tagged release)
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    # Helium browser (prebuilt upstream tarball, bot-updated)
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -36,6 +42,7 @@
       nix-index-database,
       plasma-manager,
       nix-flatpak,
+      helium,
       ...
     }@inputs:
     {
@@ -51,6 +58,7 @@
           # Make unstable packages available as pkgs.unstable.<name>
           {
             nixpkgs.overlays = [
+              helium.overlays.default # pkgs.helium
               (final: prev: {
                 unstable = import nixpkgs-unstable {
                   system = prev.stdenv.hostPlatform.system;
