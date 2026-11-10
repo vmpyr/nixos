@@ -28,6 +28,7 @@
     git
     wget
     curl
+    unzip
   ];
 
   system.stateVersion = "26.05";
