@@ -21,6 +21,7 @@
   home.packages = with pkgs; [
     ripgrep
     fd
+    jq
     btop
     tig
     python3
