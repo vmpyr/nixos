@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "deadband": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "upstream-src": "upstream-src"
+      },
+      "locked": {
+        "lastModified": 1788391522,
+        "narHash": "sha256-gwCv/WyX9/aqS96dl4FrHWHhJNeOhEYlSjsja3APi10=",
+        "ref": "refs/heads/master",
+        "rev": "69801573f26436ecd1e24b077489142c217c761b",
+        "revCount": 7,
+        "type": "git",
+        "url": "https://codeberg.org/Epaphroditus/gamesir-linux-tools-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/Epaphroditus/gamesir-linux-tools-nix"
+      }
+    },
     "helium": {
       "inputs": {
         "nixpkgs": [
@@ -152,6 +173,7 @@
     },
     "root": {
       "inputs": {
+        "deadband": "deadband",
         "helium": "helium",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
@@ -173,6 +195,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "upstream-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794594819,
+        "narHash": "sha256-c2UxqbdrEFb5IvTW3uB8dsCmJ+0n32OSbkTCEQyq+lA=",
+        "owner": "broroeror",
+        "repo": "gamesir-linux-tools",
+        "rev": "2c853bffe6730eb0c265d248462bf5e4ccce56e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "broroeror",
+        "repo": "gamesir-linux-tools",
         "type": "github"
       }
     },

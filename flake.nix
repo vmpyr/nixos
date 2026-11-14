@@ -31,6 +31,12 @@
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Deadband: GameSir controller configurator (community Nix packaging)
+    deadband = {
+      url = "git+https://codeberg.org/Epaphroditus/gamesir-linux-tools-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
