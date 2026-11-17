@@ -37,6 +37,9 @@
       url = "git+https://codeberg.org/Epaphroditus/gamesir-linux-tools-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Hermes Desktop: client for the remote Hermes agent (not following nixpkgs; upstream targets unstable)
+    hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
   outputs =

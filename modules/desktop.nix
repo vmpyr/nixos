@@ -1,3 +1,5 @@
+{ inputs, pkgs, ... }:
+
 {
   # --- Desktop: KDE Plasma 6 on Wayland ---
   services.desktopManager.plasma6.enable = true;
@@ -24,4 +26,9 @@
   # --- Device sharing ---
   programs.kdeconnect.enable = true; # phone integration; opens TCP/UDP 1714-1764
   programs.localsend.enable = true; # AirDrop-style file transfer; opens port 53317
+
+  # --- Hermes Desktop: client for the remote Hermes agent ---
+  environment.systemPackages = [
+    inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.desktop
+  ];
 }
